@@ -16,16 +16,9 @@ class Game {
     this.lossElement.textContent = 0;
   }
 
-  registerEvents() {
-    /*
-    
-      Написать обработчик события, который откликается
-      на каждый введённый символ.
-      В случае правильного ввода символа вызываем this.success()
-      При неправильном вводе символа - this.fail();
-      DOM-элемент текущего символа находится в свойстве this.currentSymbol.
-     */
-    const symbolComparison = (event) => {
+ registerEvents() {
+  
+        const symbolComparison = (event) => {
       let key = event.key;
    
       if (key === this.currentSymbol.textContent) {
