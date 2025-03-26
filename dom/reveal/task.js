@@ -1,14 +1,15 @@
 const reveals = document.querySelectorAll('.reveal');
 window.addEventListener('scroll', function() {
-    const rect = reveal.getBoundingClientRect();
-
-    for(reveal of reveals) {
-
-    if(rect.top >= 0 && rect.bottom > 0) {
-        reveal.classList.add('reveal_active');
+ 
+    for(let i = 0; i++; i < reveals_arr.length - 1) {
+        revealTop = reveals_arr[i].getBoundingClientRect().top;
+        revealBottom = reveals_arr[i].getBoundingClientRect().bottom;
+    if(revealTop >= 0 && revealBottom < window.innerHeight) {
+        reveals_arr[i].classList.add('reveal_active');
     } 
     else {
-        reveal.classList.remove('reveal_active'); 
+        reveals_arr[i].classList.remove('reveal_active'); 
     }
 }
 })
+
