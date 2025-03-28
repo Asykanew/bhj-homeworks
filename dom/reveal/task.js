@@ -1,10 +1,10 @@
-const reveals = document.querySelectorAll('.reveal');
+const reveals_arr = document.querySelectorAll('.reveal');
 window.addEventListener('scroll', function() {
  
-    for(let i = 0; i++; i < reveals_arr.length - 1) {
+    for(let i = 0; i++; i < reveals_arr.length) {
         revealTop = reveals_arr[i].getBoundingClientRect().top;
         revealBottom = reveals_arr[i].getBoundingClientRect().bottom;
-    if(revealTop >= 0 && revealBottom < window.innerHeight) {
+    if(revealTop >= 0 && revealBottom > 0) {
         reveals_arr[i].classList.add('reveal_active');
     } 
     else {
